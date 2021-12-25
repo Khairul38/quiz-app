@@ -1,10 +1,11 @@
 import React from 'react';
 
-const QuestionCounter = () => {
+const QuestionCounter = (props) => {
+    const { questions, currentQuestion } = props;
     return (
         <div className='p-4'>
             <div className='d-flex justify-content-between fw-bold'>
-                <p>Question 1/8</p>
+                <p>Question {currentQuestion + 1}/{questions.length}</p>
                 <p>Need Help?</p>
             </div>
             <div className='d-flex flex-wrap mx-2'>
